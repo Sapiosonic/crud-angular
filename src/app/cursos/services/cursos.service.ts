@@ -10,7 +10,7 @@ import { delay } from 'rxjs/internal/operators/delay';
 })
 export class CursosService {
 
-  private readonly API = '/assets/acursos.json';
+  private readonly API = '/assets/cursos.json';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class CursosService {
     return this.httpClient.get<Curso[]>(this.API)
     .pipe(
       first(),
-      delay(5000),
+      //delay(5000),
       tap(cursos => console.log(cursos))
     );
   }
