@@ -7,6 +7,7 @@ import com.entra21.crudspring.repository.CursosRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class CursosController {
     private CursosRepository cursosRepository;
 
     @GetMapping
-    public List<Curso> list(){
+    public @ResponseBody List<Curso> list(){
         return cursosRepository.findAll();
     }
 
