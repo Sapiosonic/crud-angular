@@ -10,7 +10,7 @@ import { delay } from 'rxjs/internal/operators/delay';
 })
 export class CursosService {
 
-  private readonly API = '/assets/cursos.json';
+  private readonly API = 'api/cursos';
 
   constructor(private httpClient: HttpClient) { }
 
