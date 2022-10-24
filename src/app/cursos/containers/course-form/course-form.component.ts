@@ -20,8 +20,7 @@ export class CourseFormComponent implements OnInit {
       private formBuilder: NonNullableFormBuilder,
       private service: CursosService,
       private snackBar: MatSnackBar,
-      private location: Location
-    ) { 
+      private location: Location) { 
     //this.form 
   }
 

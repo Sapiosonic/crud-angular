@@ -11,16 +11,21 @@ export class CursosListaComponent implements OnInit {
 
   @Input() cursos: Curso[] = [];
   @Output() add = new EventEmitter(false);
-   readonly displayedColumns = ['nome', 'categoria', 'actions'];
+  @Output() edit = new EventEmitter(false);
+
+  readonly displayedColumns = ['nome', 'categoria', 'actions'];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-   onAdd() {
-    
+  onAdd() {
     this.add.emit(true);
+  }
+
+  onEdit(curso: Curso){
+    this.edit.emit(curso);
   }
 
 }
