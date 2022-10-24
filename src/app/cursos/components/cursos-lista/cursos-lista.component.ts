@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Curso } from '../../model/curso';
 
 @Component({
